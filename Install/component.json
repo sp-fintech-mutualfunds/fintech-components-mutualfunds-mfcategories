@@ -1,0 +1,71 @@
+{
+	"name" : "MFCategories",
+	"route" : "mf/categories",
+	"description" : "<p>Mutual Fund categories component</p>",
+	"module_type" : "components",
+	"app_type" : "fintech",
+	"category" : "mutualfunds",
+	"version" : "0.0.0",
+	"repo" : "https://github.com/sp-fintech/fintech-components-mutualfunds-mfcategories",
+	"class" : "Apps\\Fintech\\Components\\Mf\\Categories\\CategoriesComponent",
+	"dependencies" : 
+	{
+		"core" : 
+		{
+			"name" : "Core",
+			"version" : "0.0.0-rc.11",
+			"repo" : "https://github.com/sp-framework/core"
+		},
+		"apptype" : 
+		{
+			"name" : "Fintech",
+			"version" : "0.3.0",
+			"repo" : "https://github.com/sp-fintech/fintech"
+		},
+		"packages" : 
+		[
+			{
+				"name" : "MfAmcs",
+				"version" : "0.2.0",
+				"repo" : "https://github.com/sp-fintech/fintech-packages-mutualfunds-mfamcs"
+			}
+		],
+		"middlewares" : [],
+		"views" : [],
+		"externals" : 
+		{
+			"composer" : 
+			{
+				"require" : []
+			},
+			"config" : 
+			{
+				"allow-plugins" : []
+			},
+			"extra" : 
+			{
+				"patches" : []
+			}
+		}
+	},
+	"menu" : 
+	{
+		"mf" : 
+		{
+			"title" : "mf",
+			"icon" : "file-invoice-dollar",
+			"childs" : 
+			{
+				"categories" : 
+				{
+					"title" : "categories",
+					"icon" : "circle-dot",
+					"link" : "mf/categories"
+				}
+			}
+		},
+		"seq" : "0"
+	},
+	"settings" : [],
+	"widgets" : []
+}
