@@ -1,12 +1,12 @@
 {
-	"name" : "MFCategories",
+	"name" : "Mutual Fund Categories",
 	"route" : "mf/categories",
-	"description" : "<p>Mutual Fund categories component</p>",
+	"description" : "<p>Mutual Fund Categories</p>",
 	"module_type" : "components",
 	"app_type" : "fintech",
 	"category" : "mutualfunds",
-	"version" : "0.0.0",
-	"repo" : "https://github.com/sp-fintech/fintech-components-mutualfunds-mfcategories",
+	"version" : "0.1.0",
+	"repo" : "https://github.com/sp-fintech-mutualfunds/fintech-components-mutualfunds-mfcategories",
 	"class" : "Apps\\Fintech\\Components\\Mf\\Categories\\CategoriesComponent",
 	"dependencies" : 
 	{
