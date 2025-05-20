@@ -147,4 +147,25 @@ class CategoriesComponent extends BaseComponent
             $this->package->packagesData->responseCode
         );
     }
+
+    public function calculateCategoriesVarianceAction()
+    {
+        $this->requestIsPost();
+
+        if (!isset($this->postData()['mainCategory']) ||
+            !isset($this->postData()['withCategory'])
+        ) {
+            $this->addResponse('Please provide main and with categories', 1);
+
+            return false;
+        }
+
+        $this->categoriesPackage->calculateCategoriesVariance($this->postData()['mainCategory'], $this->postData()['withCategory']);
+
+        $this->addResponse(
+            $this->categoriesPackage->packagesData->responseMessage,
+            $this->categoriesPackage->packagesData->responseCode,
+            $this->categoriesPackage->packagesData->responseData ?? []
+        );
+    }
 }
