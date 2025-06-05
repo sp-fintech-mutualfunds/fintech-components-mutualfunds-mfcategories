@@ -148,7 +148,7 @@ class CategoriesComponent extends BaseComponent
         );
     }
 
-    public function calculateCategoriesVarianceAction()
+    public function calculateCategoriesPercentDiffAction()
     {
         $this->requestIsPost();
 
@@ -160,7 +160,7 @@ class CategoriesComponent extends BaseComponent
             return false;
         }
 
-        $this->categoriesPackage->calculateCategoriesVariance($this->postData()['mainCategory'], $this->postData()['withCategory']);
+        $this->categoriesPackage->calculateCategoriesPercentDiff($this->postData()['mainCategory'], $this->postData()['withCategory']);
 
         $this->addResponse(
             $this->categoriesPackage->packagesData->responseMessage,
